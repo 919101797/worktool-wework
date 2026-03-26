@@ -1,0 +1,24 @@
+[project]
+name = "automation-api"
+version = "0.1.0"
+description = "Automation API Server"
+dependencies = [
+    "fastapi[standard]>=0.135.2",
+    "pydantic-settings>=2.13.1",
+    "uvicorn>=0.42.0",
+    "wechat-agent",
+    "wework-agent",
+]
+requires-python = ">=3.12"
+
+[project.scripts]
+automation-server = "automation_api.main:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+wechat-agent = { workspace = true }
+wework-agent = { workspace = true }
+ax-core = { workspace = true }

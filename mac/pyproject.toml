@@ -1,0 +1,21 @@
+[project]
+name = "mac-automation"
+version = "0.1.0"
+description = "Monorepo workspace for macOS chat automation"
+requires-python = ">=3.12"
+dependencies = [
+    "automation-api",
+    "wechat-agent",
+    "wework-agent",
+    "ax-core",
+]
+members = ["packages/*", "apps/*"]
+
+[tool.uv.workspace]
+members = ["packages/*", "apps/*"]
+
+[tool.uv.sources]
+automation-api = { workspace = true }
+wechat-agent = { workspace = true }
+wework-agent = { workspace = true }
+ax-core = { workspace = true }

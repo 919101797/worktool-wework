@@ -1,0 +1,15 @@
+[project]
+name = "ax-core"
+version = "0.1.0"
+description = "macOS Accessibility Core utilities"
+dependencies = [
+    "pyobjc-core>=12.1",
+    "pyobjc-framework-applicationservices>=12.1",
+    "pyobjc-framework-cocoa>=12.1",
+    "pyobjc-framework-quartz>=12.1",
+]
+requires-python = ">=3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
